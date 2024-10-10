@@ -6,8 +6,9 @@ A fill in the blanks part of speech word game powered by wikipedia introductions
 
 ## Setup
 
-- git clone
-- npm i
+1. [Install nodejs](https://nodejs.org/en/download/package-manager) or [nvm](https://github.com/nvm-sh/nvm) (and then install nodejs with nvm)
+2. `git clone git@github.com:jwaresoft/wordlibz.git`
+3. `cd wordlibz && npm install`
 
 ## Up & Running
 
