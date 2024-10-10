@@ -14,9 +14,9 @@ function getPageInfoWithBestExtract(
   });
 }
 
-function pageInfoHasExtracts(pages: Array<PageInfo>): Boolean {
+function pageInfoHasExtracts(pages: Array<PageInfo>): boolean {
     const extracts = pages.filter((pageInfo: PageInfo) => { 
-        return pageInfo.hasOwnProperty('extract')
+        return pageInfo.extract !== undefined
     })
 
 
