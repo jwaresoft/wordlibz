@@ -2,7 +2,6 @@
 import { reconstructTextFromTagArray } from "./reconstructText";
 import { tagExtract } from "./tagHelpers";
 import { describe, it, expect } from "vitest";
-import {default as pageList01Data }  from "../__mockdata__/pageList01.json";
 
 
 // helper since most of these sentences are identical
