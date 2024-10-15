@@ -1,6 +1,9 @@
+/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { reconstructTextFromTagArray } from "./reconstructText";
-import { tagExtract, tagExtractFromPageInfo } from "./tagHelpers";
+import { tagExtract } from "./tagHelpers";
 import { describe, it, expect } from "vitest";
+import {default as pageList01Data }  from "../__mockdata__/pageList01.json";
+
 
 // helper since most of these sentences are identical
 function tagAndExpectSentence(sentence: string) {
@@ -30,5 +33,9 @@ describe("reconstructTextFromTagArray()", () => {
       const sampleSentence = 'Jeremy said "You are a real bully", and then he said "and I mean it!"';
       tagAndExpectSentence(sampleSentence);
     });
+    it("should reconstruct a sentence with colons and semicolons ", () => {
+        const sampleSentence = 'Joey Bishop (nee; something) had a colon: a colon.';
+        tagAndExpectSentence(sampleSentence);
+      });
   });
 });

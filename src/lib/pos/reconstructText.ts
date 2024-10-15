@@ -3,6 +3,7 @@ import { PosTaggedToken } from "wink-pos-tagger";
 const sentencePunctuation = new Set([".", "!", "?"]);
 const openingPunctuationSet = new Set(["[", "{", "("]);
 const closingPunctuationSet = new Set(["]", "}", ")"]);
+const noSpaceBefore = new Set([";", ":"])
 const additionalNoSpace = new Set(["/", "\\"]);
 
 /**
@@ -35,6 +36,7 @@ function reconstructTextFromTagArray(tagsArray: Array<PosTaggedToken>): string {
       currentValue?.startsWith("'") ||
       additionalNoSpace.has(currentValue) ||
       additionalNoSpace.has(lastValue) ||
+      noSpaceBefore.has(currentValue) ||
       (lastValue === '"' && waitingForClosingQuote ) ||
       currentValue === ","
     ) {
