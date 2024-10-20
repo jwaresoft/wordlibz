@@ -1,6 +1,6 @@
 import { PosTaggedToken } from "wink-pos-tagger";
 
-export type UserPOSItem = {
+export type IndexedAndLabeledPOSItem = {
     originalIndex: number[];
-    friendlyPOS: string;
+    friendlyPOS: string | undefined;
 } & PosTaggedToken

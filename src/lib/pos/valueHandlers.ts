@@ -1,6 +1,6 @@
 import { PosTaggedToken } from "wink-pos-tagger";
 import { isProperNoun, getFriendlyPOSName } from "./posMapsAndFunctions";
-import { UserPOSItem } from "@/types/userPOSItem";
+import { IndexedAndLabeledPOSItem } from "@/types/indexedAndLabeledPOSItem";
 
 type ProperNounMap = {[key: string] : Array<number>}
 
@@ -10,7 +10,7 @@ type ProperNounMap = {[key: string] : Array<number>}
  * @param tagList 
  * @returns 
  */
-function indexValuesToReplace(tagList: Array<PosTaggedToken>): Array<UserPOSItem> {
+function indexValuesToReplace(tagList: Array<PosTaggedToken>): Array<IndexedAndLabeledPOSItem> {
     // we will store proper nouns here for collecting all indices
     const properNounMap: ProperNounMap = {}
 
@@ -26,7 +26,7 @@ function indexValuesToReplace(tagList: Array<PosTaggedToken>): Array<UserPOSItem
         return properNounMap[word]
     }
 
-    return tagList.map((posTaggedItem, index): UserPOSItem => {
+    return tagList.map((posTaggedItem, index): IndexedAndLabeledPOSItem => {
         const indexToAdd = isProperNoun(posTaggedItem.pos) ? handleProperNouns(posTaggedItem, index) : [index]
         const friendlyPOS = getFriendlyPOSName(posTaggedItem.pos)
         return {
@@ -41,7 +41,7 @@ function indexValuesToReplace(tagList: Array<PosTaggedToken>): Array<UserPOSItem
  * 
  * 
  */
-// function reduceListForUserOptions(userTagListItems: UserPOSItem) {
+// function reduceListForUserOptions(userTagListItems: IndexedAndLabeledPOSItem) {
 
 // }
 

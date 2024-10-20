@@ -1,0 +1,18 @@
+import { IndexedAndLabeledPOSItem } from "@/types/indexedAndLabeledPOSItem";
+import { UserInputPOS } from "@/types/userInputPOS";
+
+/**
+ * Reduce Values to just those needed to collect user input
+ */
+function reduceToOrResetUserValues(indexedAndLabeledPOSItemList: (Array<IndexedAndLabeledPOSItem> | Array<UserInputPOS>) ): Array<UserInputPOS> {
+    return indexedAndLabeledPOSItemList.map((element) => {
+        return {
+            value: "",
+            pos: element.pos,
+            originalIndex: element.originalIndex,
+            friendlyPOS: element.friendlyPOS
+        }
+    })
+}
+
+export { reduceToOrResetUserValues }
