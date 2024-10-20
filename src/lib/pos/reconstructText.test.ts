@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import { reconstructTextFromTagArray } from "./reconstructText";
 import { tagExtract } from "./tagHelpers";
 import { describe, it, expect } from "vitest";
@@ -13,8 +12,8 @@ function tagAndExpectSentence(sentence: string) {
   expect(reconstructedSentence).toEqual(sentence);
 }
 
-describe("reconstructTextFromTagArray()", () => {
-  describe("One off test sentences", () => {
+describe("reconstructText.ts", () => {
+  describe("reconstructTextFromTagArray()", () => {
     it("should reconstruct sentence with a contraction!", () => {
       // create a tagged list from the sample sentence.
       const sampleSentence = "Let's have a great day!";
