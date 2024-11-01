@@ -12,7 +12,7 @@ function UserWordList({ wordList }: { wordList: Array<IndexedAndLabeledPOSItem> 
         return (
           <>
             <label htmlFor={keyIndex}>
-              {element.friendlyPOS.toUpperCase()}
+              {element.friendlyPOS ? element.friendlyPOS.toUpperCase() : ""}
             </label>
             <input
               className="userPOSInput"

@@ -1,5 +1,7 @@
 # Wordlibz
 
+**COMING SOON** -- project still actively being developed.  Check back later!
+
 A fill in the blanks part of speech word game powered by wikipedia introductions.  You know, for fun!
 
 ![](./docs/wordlibz.png)
