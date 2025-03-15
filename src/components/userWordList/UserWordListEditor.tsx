@@ -19,7 +19,7 @@ function UserWordListEditor({
   const [userWordList, setUserWordList] = useState(resetUserValues(wordList));
 
   function handleOnChange(value: string, wordIndex: number) {
-    setUserWordList(wordList => insertWordListItem(userWordList, value, wordIndex));
+    setUserWordList(wordList => insertWordListItem(wordList, value, wordIndex));
   }
 
   function handleClear() {
