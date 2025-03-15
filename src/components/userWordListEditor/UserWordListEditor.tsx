@@ -36,7 +36,7 @@ function UserWordListEditor({
   return (
     <div className="user-word-list">
       <button
-        onClick={(e: React.MouseEvent<HTMLButtonElement, MouseEvent>) =>
+        onClick={() =>
           handleClear()
         }
       >
