@@ -1,16 +1,16 @@
 import { describe, it, expect } from "vitest";
-import { reduceToOrResetUserValues } from "./userInputValues";
+import { resetUserValues } from "./userInputValues";
 import { indexValuesToReplace } from "./valueHandlers";
 import { tagExtract } from "./tagHelpers";
 import { IndexedAndLabeledPOSItem } from "@/types/indexedAndLabeledPOSItem";
 
 
 describe('userInputValues.ts', () => {
-    describe('reduceToOrResetUserValues()', () => {
+    describe('resetUserValues()', () => {
         it('should remove additional keys from UserPOSItem type', () => {
             const testSentencesTagged = tagExtract("What is the biggest hat you own?")
             const taggedWithIndex = indexValuesToReplace(testSentencesTagged);
-            const userReadyValues = reduceToOrResetUserValues(taggedWithIndex)
+            const userReadyValues = resetUserValues(taggedWithIndex)
 
             userReadyValues.forEach((element, index) => {
                 expect(element.friendlyPOS).toEqual(taggedWithIndex[index].friendlyPOS);
@@ -63,7 +63,7 @@ describe('userInputValues.ts', () => {
                 { value: 'xcvcxv', pos: '.', originalIndex: [ 7 ], friendlyPOS: undefined }
               ]
 
-        const userResetValues = reduceToOrResetUserValues(testArray)
+        const userResetValues = resetUserValues(testArray)
         userResetValues.forEach((element, index) => {
             expect(element.friendlyPOS).toEqual(testArray[index].friendlyPOS);
             expect(element.originalIndex).toEqual(testArray[index].originalIndex);

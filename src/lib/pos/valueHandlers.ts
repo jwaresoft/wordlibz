@@ -26,7 +26,7 @@ function indexValuesToReplace(tagList: Array<PosTaggedToken>): Array<IndexedAndL
         return properNounMap[word]
     }
 
-    return tagList.map((posTaggedItem, index): IndexedAndLabeledPOSItem => {
+    return tagList.map((posTaggedItem: PosTaggedToken, index: number): IndexedAndLabeledPOSItem => {
         const indexToAdd = isProperNoun(posTaggedItem.pos) ? handleProperNouns(posTaggedItem, index) : [index]
         const friendlyPOS = getFriendlyPOSName(posTaggedItem.pos)
         return {
