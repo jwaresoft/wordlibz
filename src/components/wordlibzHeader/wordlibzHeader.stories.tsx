@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
  
-// import { UserWordListEditor } from './UserWordListEditor'
-// import { mockUserWords } from './__mock__/mockUserWords';
 import { WordlibzHeader } from './wordlibzHeader';
  
 const meta: Meta<typeof WordlibzHeader> = {
