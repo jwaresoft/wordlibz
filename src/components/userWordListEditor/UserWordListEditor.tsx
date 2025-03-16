@@ -3,6 +3,7 @@ import { IndexedAndLabeledPOSItem } from "@/types/indexedAndLabeledPOSItem";
 import "./userWordListEditor.css";
 import { resetUserValues } from "@/lib/pos";
 import { insertWordListItem } from "./userWorldListEditorHelpers";
+import { Button } from "../buttons/buttons";
 
 /**
  *
@@ -35,13 +36,6 @@ function UserWordListEditor({
 
   return (
     <div className="user-word-list">
-      <button
-        onClick={() =>
-          handleClear()
-        }
-      >
-        Clear
-      </button>
       {wordList.map((element: IndexedAndLabeledPOSItem, index: number) => {
         const keyIndex = `user-input-${index}`;
 
@@ -51,7 +45,7 @@ function UserWordListEditor({
               {element.friendlyPOS ? element.friendlyPOS.toUpperCase() : ""}
             </label>
             <input
-              className="userPOSInput"
+              className="user-pos-input"
               key={keyIndex}
               id={keyIndex}
               value={userWordList[index].value}
@@ -60,13 +54,12 @@ function UserWordListEditor({
           </>
         );
       })}
-      <button
-        onClick={() => {
+      <Button
+        onClickHandler={() => {
           handleSubmit();
         }}
-      >
-        Submit
-      </button>
+        label={'SUBMIT'}
+      />
       {/* </form> */}
     </div>
   );
