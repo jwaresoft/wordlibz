@@ -1,0 +1,18 @@
+.wordlibz-header-button {
+    margin: 0px 5px;
+}
+
+.wordlibz-button {
+    min-width: 100px;
+}
+
+.wordlibz-button-common { 
+    box-shadow:5px 5px black;
+    padding: 15px 20px;
+    margin: 0px 5px;
+    border: 1px solid black;
+}
+
+.wordlibz-button-common:active {
+    box-shadow:2px 2px black;
+}
