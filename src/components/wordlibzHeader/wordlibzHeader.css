@@ -10,3 +10,18 @@
     align-items: center;
     gap: 3px;
 }
+
+.header-button {
+    padding: 15px 20px;
+    border: 1px solid black;
+    margin: 0px 5px;
+}
+
+.wordlibz-button { 
+    box-shadow:5px 5px black;
+}
+
+.wordlibz-button:active {
+    box-shadow:2px 2px black;
+}
+
