@@ -14,15 +14,17 @@ export default meta;
 
 type Story = StoryObj<typeof UserWordListEditor>;
  
-// wrapper for demo / testing as these values will come from the store
+/**
+ * wrapper for demo / testing as these values will come from the store 
+ * */ 
 function UserWordListWrapper() {
   // prop wordList
   const [userList, setUserList ] = useState(resetUserValues(mockUserWords))
-  
+  // prop handleIndexChange
   function updateUserList(word: string, index: number) {
     setUserList(oldList => insertWordListItem(oldList, word, index))
   }
-
+  // prop submitUserWords
   function submit() {
     alert(JSON.stringify(userList, undefined, 2))
   }
@@ -35,6 +37,5 @@ function UserWordListWrapper() {
 }
 
 export const Primary: Story = {
-  // args: { wordList: mockUserWords as Array<IndexedAndLabeledPOSItem> },
   render: () => <UserWordListWrapper/>
 }
