@@ -6,6 +6,7 @@ import './buttons.css';
 type ButtonProps = {
     onClickHandler: () => void;
     label: string;
+    color?: string;
 }
 
 /**

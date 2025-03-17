@@ -1,9 +1,12 @@
-import { useState } from "react";
-import { IndexedAndLabeledPOSItem } from "@/types/indexedAndLabeledPOSItem";
 import "./userWordListEditor.css";
-import { resetUserValues } from "@/lib/pos";
-import { insertWordListItem } from "./userWorldListEditorHelpers";
 import { Button } from "../buttons/buttons";
+import { UserInputPOS } from "@/types/userInputPOS";
+
+export type UserWordListEditorProps = {
+  wordList: Array<UserInputPOS>;
+  handleIndexChange: (word: string, index: number) => void;
+  submitUserWords: () => void;
+}
 
 /**
  *
@@ -12,31 +15,10 @@ import { Button } from "../buttons/buttons";
  * @param wordlist - an array of IndexedAndLabeledPOSItems
  * @returns Component
  */
-function UserWordListEditor({
-  wordList,
-}: {
-  wordList: Array<IndexedAndLabeledPOSItem>;
-}) {
-  const [userWordList, setUserWordList] = useState(resetUserValues(wordList));
-
-  function handleOnChange(value: string, wordIndex: number) {
-    setUserWordList(wordList => insertWordListItem(wordList, value, wordIndex));
-  }
-
-  function handleClear() {
-    // TODO ADD CONFIRM AT SOME POINT!
-    setUserWordList(resetUserValues(wordList));
-  }
-
-  function handleSubmit() {
-    alert(userWordList.toString());
-  }
-
-  console.log(userWordList)
-
+function UserWordListEditor({ wordList, handleIndexChange, submitUserWords }: UserWordListEditorProps) {
   return (
     <div className="user-word-list">
-      {wordList.map((element: IndexedAndLabeledPOSItem, index: number) => {
+      {wordList.map((element: UserInputPOS, index: number) => {
         const keyIndex = `user-input-${index}`;
 
         return (
@@ -48,18 +30,20 @@ function UserWordListEditor({
               className="user-pos-input"
               key={keyIndex}
               id={keyIndex}
-              value={userWordList[index].value}
-              onChange={(e) => {handleOnChange(e.target.value, index)}}
+              value={wordList[index].value}
+              onChange={(e) => {handleIndexChange(e.target.value, index)}}
             ></input>
           </>
         );
       })}
+      <div className="user-wordlist-submit-zone">
       <Button
         onClickHandler={() => {
-          handleSubmit();
+          submitUserWords();
         }}
         label={'SUBMIT'}
       />
+      </div>
       {/* </form> */}
     </div>
   );

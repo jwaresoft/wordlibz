@@ -15,3 +15,12 @@
 label {
     font-size: 1em;
 }
+
+.user-wordlist-submit-zone {
+    margin: 20px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
