@@ -11,5 +11,8 @@ export default meta;
 type Story = StoryObj<typeof WordlibzHeader>;
  
 export const Primary: Story = {
-    args: {}
+    args: {
+      handleClear: () => {alert("CLEAR!")},
+      handleNew: () => {alert("NEW!")}
+    }
 }

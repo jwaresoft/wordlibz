@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { getRandomArticleData } from './lib'
+import { getRandomArticleData } from '@/lib/wikipedia';
 import './App.css'
 
 function App() {

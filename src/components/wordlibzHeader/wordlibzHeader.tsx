@@ -2,7 +2,12 @@ import { HeaderButton } from "@/components/buttons/buttons";
 import wordlibzLogo from "@/assets/wordlibz.svg";
 import "./wordlibzHeader.css";
 
-export function WordlibzHeader() {
+type WordLibzHeaderProps = {
+  handleClear: () => void;
+  handleNew: () => void;
+}
+
+export function WordlibzHeader({handleClear, handleNew}: WordLibzHeaderProps) {
   return (
     <div className="wordlibz-header">
       <div className="wordlibz-header-panel">
@@ -14,11 +19,11 @@ export function WordlibzHeader() {
       <div className="wordlibz-header-panel">
         <HeaderButton
           label={"CLEAR"}
-          onClickHandler={() => console.log("ok")}
+          onClickHandler={handleClear}
         />
         <HeaderButton
           label={"NEW"}
-          onClickHandler={() => console.log("ok")}
+          onClickHandler={handleNew}
         />
       </div>
     </div>
