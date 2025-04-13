@@ -1,6 +1,6 @@
 import { HeaderButton } from "@/components/buttons/buttons";
 import wordlibzLogo from "@/assets/wordlibz.svg";
-import "./wordlibzHeader.css";
+import "./WordlibzHeader.css";
 
 type WordLibzHeaderProps = {
   handleClear: () => void;

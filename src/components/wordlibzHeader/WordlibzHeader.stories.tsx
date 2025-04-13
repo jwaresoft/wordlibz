@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react';
  
-import { WordlibzHeader } from './wordlibzHeader';
+import { WordlibzHeader } from './WordlibzHeader';
  
 const meta: Meta<typeof WordlibzHeader> = {
   component: WordlibzHeader,
