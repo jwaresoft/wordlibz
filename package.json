@@ -16,7 +16,8 @@
   "dependencies": {
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "wink-pos-tagger": "^2.2.2"
+    "wink-pos-tagger": "^2.2.2",
+    "zustand": "^5.0.3"
   },
   "devDependencies": {
     "@chromatic-com/storybook": "^3.2.6",

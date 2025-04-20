@@ -3,7 +3,6 @@ import { insertWordListItemReducer } from '../../lib/reducers/insertWordListItem
 import { resetUserValues } from '@/lib/pos';
 import { UserWordListEditor } from './UserWordListEditor'
 import { mockUserWords } from './__mock__/mockUserWords';
-import { IndexedAndLabeledPOSItem } from '@/types/indexedAndLabeledPOSItem';
 import { useState } from 'react';
  
 const meta: Meta<typeof UserWordListEditor> = {
