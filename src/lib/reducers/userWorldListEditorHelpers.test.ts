@@ -1,13 +1,13 @@
 import { describe, it, expect } from "vitest";
-import { mockUserWords } from "./__mock__/mockUserWords";
-import { insertWordListItem } from "./userWorldListEditorHelpers";
+import { mockUserWords } from "../../components/userWordListEditor/__mock__/mockUserWords";
+import { insertWordListItemReducer } from "./insertWordListItemReducer";
 
-describe("userWorldListEditorHelpers.ts", () => {
-  describe("insertWordListItem()", () => {
+describe("insertWordListItemReducer.ts", () => {
+  describe("insertWordListItemReducer()", () => {
     it("should return a new array with the new value inserted at the passed index", () => {});
         const newWord = "acceptable";
         const newIndex = 3;
-        const newWordList = insertWordListItem(mockUserWords, newWord, newIndex);
+        const newWordList = insertWordListItemReducer(mockUserWords, newWord, newIndex);
 
         newWordList.forEach((wordObj, index) => {
             const mockWordListObject = mockUserWords[index];
