@@ -1,9 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { insertWordListItem } from './userWorldListEditorHelpers';
+import { insertWordListItemReducer } from '../../lib/reducers/insertWordListItemReducer';
 import { resetUserValues } from '@/lib/pos';
 import { UserWordListEditor } from './UserWordListEditor'
 import { mockUserWords } from './__mock__/mockUserWords';
-import { IndexedAndLabeledPOSItem } from '@/types/indexedAndLabeledPOSItem';
 import { useState } from 'react';
  
 const meta: Meta<typeof UserWordListEditor> = {
@@ -22,7 +21,7 @@ function UserWordListWrapper() {
   const [userList, setUserList ] = useState(resetUserValues(mockUserWords))
   // prop handleIndexChange
   function updateUserList(word: string, index: number) {
-    setUserList(oldList => insertWordListItem(oldList, word, index))
+    setUserList(oldList => insertWordListItemReducer(oldList, word, index))
   }
   // prop submitUserWords
   function submit() {
