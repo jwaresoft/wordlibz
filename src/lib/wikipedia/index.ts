@@ -1,2 +1,2 @@
-export * from './extractHelpers';
-export * from './wikipediaAPIFunctions';
+export * from "./extractHelpers";
+export * from "./wikipediaAPIFunctions";

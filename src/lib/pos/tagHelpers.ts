@@ -1,12 +1,11 @@
 import { PageInfo } from "@/types/wikipedia";
 import posTagger from "wink-pos-tagger";
 
-
 /**
  * wrapper for tokenizeExtract which takes PageInfo as a parameter
- * 
- * @param pageInfo 
- * @returns 
+ *
+ * @param pageInfo
+ * @returns
  */
 function tagExtractFromPageInfo(pageInfo: PageInfo) {
   return tagExtract(pageInfo?.extract);
@@ -14,14 +13,13 @@ function tagExtractFromPageInfo(pageInfo: PageInfo) {
 
 /**
  * Tokenizes an extract (string)
- * 
- * @param extract 
- * @returns 
+ *
+ * @param extract
+ * @returns
  */
 function tagExtract(extract: string) {
   const tagger = new posTagger();
   return tagger.tagSentence(extract);
 }
 
-
-export {tagExtract, tagExtractFromPageInfo,  };
+export { tagExtract, tagExtractFromPageInfo };

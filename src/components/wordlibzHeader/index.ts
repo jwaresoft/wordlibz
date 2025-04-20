@@ -1,3 +1,3 @@
 import { WordlibzHeader } from "./WordlibzHeader";
 
-export { WordlibzHeader }
+export { WordlibzHeader };

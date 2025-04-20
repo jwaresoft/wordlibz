@@ -1,4 +1,7 @@
-import { UserWordListEditor, UserWordListEditorProps } from "./UserWordListEditor";
+import {
+  UserWordListEditor,
+  UserWordListEditorProps,
+} from "./UserWordListEditor";
 
-export { UserWordListEditor }
-export type { UserWordListEditorProps }
+export { UserWordListEditor };
+export type { UserWordListEditorProps };

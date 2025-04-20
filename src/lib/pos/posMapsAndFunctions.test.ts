@@ -42,7 +42,7 @@ describe("posMapsAndFunctions.ts", () => {
 
       properNounTypes.forEach((posTag) => {
         expect(getFriendlyPOSName(posTag)).toEqual(
-          posFriendlyNames.Proper_Noun
+          posFriendlyNames.Proper_Noun,
         );
       });
 
@@ -140,27 +140,27 @@ describe("posMapsAndFunctions.ts", () => {
       });
     });
     describe("isProperNoun()", () => {
-        it("should return true for proper nouns", () => {
-            properNounTypes.forEach((posTag) => {
-              expect(isProperNoun(posTag)).toEqual(true);
-            });
-          });
-          it("should return false for nouns", () => {
-            nounTypes.forEach((posTag) => {
-              expect(isProperNoun(posTag)).toEqual(false);
-            });
-          });
-          it("should return false for all other values", () => {
-            const mergedTypes = [
-              ...adjectiveTypes,
-              ...adverbTypes,
-              ...verbTypes,
-              ...otherValues,
-            ];
-            mergedTypes.forEach((posTag) => {
-              expect(isProperNoun(posTag)).toEqual(false);
-            });
-          });
+      it("should return true for proper nouns", () => {
+        properNounTypes.forEach((posTag) => {
+          expect(isProperNoun(posTag)).toEqual(true);
+        });
+      });
+      it("should return false for nouns", () => {
+        nounTypes.forEach((posTag) => {
+          expect(isProperNoun(posTag)).toEqual(false);
+        });
+      });
+      it("should return false for all other values", () => {
+        const mergedTypes = [
+          ...adjectiveTypes,
+          ...adverbTypes,
+          ...verbTypes,
+          ...otherValues,
+        ];
+        mergedTypes.forEach((posTag) => {
+          expect(isProperNoun(posTag)).toEqual(false);
+        });
+      });
     });
   });
 });

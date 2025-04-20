@@ -2,7 +2,6 @@ import { reconstructTextFromTagArray } from "./reconstructText";
 import { tagExtract } from "./tagHelpers";
 import { describe, it, expect } from "vitest";
 
-
 // helper since most of these sentences are identical
 function tagAndExpectSentence(sentence: string) {
   const taggedList = tagExtract(sentence);
@@ -28,12 +27,14 @@ describe("reconstructText.ts", () => {
       tagAndExpectSentence(sampleSentence);
     });
     it("should reconstruct a sentence with quotes ", () => {
-      const sampleSentence = 'Jeremy said "You are a real bully", and then he said "and I mean it!"';
+      const sampleSentence =
+        'Jeremy said "You are a real bully", and then he said "and I mean it!"';
       tagAndExpectSentence(sampleSentence);
     });
     it("should reconstruct a sentence with colons and semicolons ", () => {
-        const sampleSentence = 'Joey Bishop (nee; something) had a colon: a colon.';
-        tagAndExpectSentence(sampleSentence);
-      });
+      const sampleSentence =
+        "Joey Bishop (nee; something) had a colon: a colon.";
+      tagAndExpectSentence(sampleSentence);
+    });
   });
 });

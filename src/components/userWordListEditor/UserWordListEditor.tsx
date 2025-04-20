@@ -6,7 +6,7 @@ export type UserWordListEditorProps = {
   wordList: Array<UserInputPOS>;
   handleIndexChange: (word: string, index: number) => void;
   submitUserWords: () => void;
-}
+};
 
 /**
  *
@@ -15,7 +15,11 @@ export type UserWordListEditorProps = {
  * @param wordlist - an array of IndexedAndLabeledPOSItems
  * @returns Component
  */
-function UserWordListEditor({ wordList, handleIndexChange, submitUserWords }: UserWordListEditorProps) {
+function UserWordListEditor({
+  wordList,
+  handleIndexChange,
+  submitUserWords,
+}: UserWordListEditorProps) {
   return (
     <div className="user-word-list">
       {wordList.map((element: UserInputPOS, index: number) => {
@@ -31,18 +35,20 @@ function UserWordListEditor({ wordList, handleIndexChange, submitUserWords }: Us
               key={keyIndex}
               id={keyIndex}
               value={wordList[index].value}
-              onChange={(e) => {handleIndexChange(e.target.value, index)}}
+              onChange={(e) => {
+                handleIndexChange(e.target.value, index);
+              }}
             ></input>
           </>
         );
       })}
       <div className="user-wordlist-submit-zone">
-      <Button
-        onClickHandler={() => {
-          submitUserWords();
-        }}
-        label={'SUBMIT'}
-      />
+        <Button
+          onClickHandler={() => {
+            submitUserWords();
+          }}
+          label={"SUBMIT"}
+        />
       </div>
       {/* </form> */}
     </div>

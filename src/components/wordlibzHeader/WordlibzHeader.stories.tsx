@@ -1,18 +1,22 @@
-import type { Meta, StoryObj } from '@storybook/react';
- 
-import { WordlibzHeader } from './WordlibzHeader';
- 
+import type { Meta, StoryObj } from "@storybook/react";
+
+import { WordlibzHeader } from "./WordlibzHeader";
+
 const meta: Meta<typeof WordlibzHeader> = {
   component: WordlibzHeader,
 };
- 
+
 export default meta;
 
 type Story = StoryObj<typeof WordlibzHeader>;
- 
+
 export const Primary: Story = {
-    args: {
-      handleClear: () => {alert("CLEAR!")},
-      handleNew: () => {alert("NEW!")}
-    }
-}
+  args: {
+    handleClear: () => {
+      alert("CLEAR!");
+    },
+    handleNew: () => {
+      alert("NEW!");
+    },
+  },
+};
