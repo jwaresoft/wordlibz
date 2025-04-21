@@ -50,7 +50,6 @@ function UserWordListEditor({
           label={"SUBMIT"}
         />
       </div>
-      {/* </form> */}
     </div>
   );
 }
