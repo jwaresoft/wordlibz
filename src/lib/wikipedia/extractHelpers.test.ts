@@ -13,25 +13,26 @@ const testArray: Array<Partial<PageInfo>> = [
     extract: "a less short one",
   },
   {
-    extract: "ok",
-  },
-  {
     extract:
       "This is the longest extract.  We should expect it to be choses by getPageInfoWithBestExtract().",
   },
+  {
+    extract: "ok",
+  },
+  {},
 ];
 
 describe("extractHelpers.test.ts", () => {
   describe("getPageInfoWithBestExtract()", () => {
     it("returns the page info with the longest extract", () => {
       const bestExtract = getPageInfoWithBestExtract(
-        testArray as Array<PageInfo>,
+        testArray as Array<PageInfo>
       );
 
-      expect(bestExtract).toEqual(testArray[3]);
+      expect(bestExtract).toEqual(testArray[2]);
     });
   });
-  describe("verifyPageInfoHasExtracts()", () => {
+  describe("pageInfoHasExtracts()", () => {
     it("returns false if there are no extracts present in the PageInfo array", () => {
       const noExtracts = [{}, {}, {}, {}];
       expect(pageInfoHasExtracts(noExtracts as Array<PageInfo>)).toBe(false);

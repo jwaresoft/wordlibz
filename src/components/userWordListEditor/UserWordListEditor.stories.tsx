@@ -7,6 +7,7 @@ import { useState } from "react";
 
 const meta: Meta<typeof UserWordListEditor> = {
   component: UserWordListEditor,
+  title: "COMPONENTS/UserWordListEditor",
 };
 
 export default meta;

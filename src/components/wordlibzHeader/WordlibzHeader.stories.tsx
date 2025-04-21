@@ -4,6 +4,7 @@ import { WordlibzHeader } from "./WordlibzHeader";
 
 const meta: Meta<typeof WordlibzHeader> = {
   component: WordlibzHeader,
+  title: "COMPONENTS/WordlibzHeader",
 };
 
 export default meta;

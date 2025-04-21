@@ -7,11 +7,24 @@ import { PageInfo } from "@/types/wikipedia";
  * @returns
  */
 function getPageInfoWithBestExtract(
-  pages: Array<PageInfo>,
+  pages: Array<PageInfo>
 ): PageInfo | undefined {
-  return pages.reduce(function (a, b) {
-    return a.extract?.length > b.extract?.length ? a : b;
-  });
+  // return pages.reduce(function (a, b) {
+  //   return a.extract?.length > b.extract?.length ? a : b;
+  // });
+  let longest = {
+    extract: "",
+  };
+
+  for (let i = 0; i < pages.length; i++) {
+    if (pages[i].extract && pages[i].extract.length > longest.extract.length) {
+      longest = pages[i];
+    }
+  }
+
+  return longest.extract.length > 0
+    ? (longest as unknown as PageInfo)
+    : undefined;
 }
 
 function pageInfoHasExtracts(pages: Array<PageInfo>): boolean {
