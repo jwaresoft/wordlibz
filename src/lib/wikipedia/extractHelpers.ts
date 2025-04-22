@@ -7,7 +7,7 @@ import { PageInfo } from "@/types/wikipedia";
  * @returns
  */
 function getPageInfoWithBestExtract(
-  pages: Array<PageInfo>
+  pages: Array<PageInfo>,
 ): PageInfo | undefined {
   // return pages.reduce(function (a, b) {
   //   return a.extract?.length > b.extract?.length ? a : b;

@@ -26,7 +26,7 @@ describe("extractHelpers.test.ts", () => {
   describe("getPageInfoWithBestExtract()", () => {
     it("returns the page info with the longest extract", () => {
       const bestExtract = getPageInfoWithBestExtract(
-        testArray as Array<PageInfo>
+        testArray as Array<PageInfo>,
       );
 
       expect(bestExtract).toEqual(testArray[2]);
