@@ -1,27 +1,26 @@
 .wordlibz-header {
-    display: flex;
-    border: 1px solid black;
-    padding: 10px;
-    justify-content: space-between; 
+  display: flex;
+  border: 1px solid black;
+  padding: 10px;
+  justify-content: space-between;
 }
 
 .wordlibz-header-panel {
-    display: flex;
-    align-items: center;
-    gap: 3px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 
 .header-button {
-    padding: 15px 20px;
-    border: 1px solid black;
-    margin: 0px 5px;
+  padding: 15px 20px;
+  border: 1px solid black;
+  margin: 0px 5px;
 }
 
-.wordlibz-button { 
-    box-shadow:5px 5px black;
+.wordlibz-button {
+  box-shadow: 5px 5px black;
 }
 
 .wordlibz-button:active {
-    box-shadow:2px 2px black;
+  box-shadow: 2px 2px black;
 }
-

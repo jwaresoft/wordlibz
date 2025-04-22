@@ -26,7 +26,11 @@ function WikipediaBestExtractDemo() {
 
   return (
     <div>
-      <button onClick={onButtonClick} disabled={loading}>
+      <button
+        onClick={onButtonClick}
+        disabled={loading}
+        style={{ width: "200px" }}
+      >
         {loading ? "loading" : "getPageInfoWithBestExtract()"}
       </button>
       <pre>{best}</pre>

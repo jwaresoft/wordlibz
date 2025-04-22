@@ -22,7 +22,11 @@ function WikipediaApiDemo() {
 
   return (
     <div>
-      <button onClick={onArticleClick} disabled={loading}>
+      <button
+        onClick={onArticleClick}
+        disabled={loading}
+        style={{ width: "200px" }}
+      >
         {loading ? "loading" : "getRandomArticleData()"}
       </button>
       <pre>{randomArticle}</pre>

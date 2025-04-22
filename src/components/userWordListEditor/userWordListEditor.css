@@ -1,26 +1,31 @@
 .user-word-list {
-    padding: 1em;
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
+  padding: 1em;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
 }
 
 .user-pos-input {
-    margin-bottom: 10px;
-    box-shadow:5px 5px black;
-    border: 1px solid black;
-    padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 5px 5px black;
+  border: 1px solid black;
+  padding: 10px;
+  border-radius: 0px;
+}
+
+.user-pos-input:focus {
+  outline: none;
+  background-color: yellow;
 }
 
 label {
-    font-size: 1em;
+  font-size: 1em;
 }
 
 .user-wordlist-submit-zone {
-    margin: 20px;
-    padding: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  margin: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
-

@@ -1,25 +1,30 @@
 .wordlibz-header-button {
-    margin: 0px 5px;
-    padding: 15px 20px;
+  margin: 0px 5px;
+  padding: 15px 20px;
 }
 
 .wordlibz-button {
-    min-width: 100px;
-    padding: 15px 20px;
-    flex-grow: 1;
+  min-width: 100px;
+  padding: 15px 20px;
+  flex-grow: 1;
 }
 
-@media screen and (max-width: 576px) { 
-    .wordlibz-header-button {
-        padding: 10px 10px;
-    }
+@media screen and (max-width: 576px) {
+  .wordlibz-header-button {
+    padding: 10px 10px;
+  }
 }
 
-.wordlibz-button-common { 
-    box-shadow:5px 5px black;
-    border: 1px solid black;
+.wordlibz-button-common {
+  box-shadow: 5px 5px black;
+  border: 1px solid black;
+  border-radius: 0px;
+}
+
+.wordlibz-button-common:focus {
+  outline: none;
 }
 
 .wordlibz-button-common:active {
-    box-shadow:2px 2px black;
+  box-shadow: 2px 2px black;
 }
